@@ -3,18 +3,20 @@ import 'package:redux/redux.dart';
 
 /// Define the state for this reducer
 class ExampleState {
-  List<ExampleItem> items;
+  final List<ExampleItem> items;
 
-  ExampleState({
+  const ExampleState({
     this.items = const [],
   });
 }
 
 /// Reducing functions
 List<ExampleItem> addItemReducer(List<ExampleItem> items, ExampleAddItemAction action) {
+  print('Adding…');
   return List.from(items)..add(action.item);
 }
 List<ExampleItem> removeItemReducer(List<ExampleItem> items, ExampleRemoveItemAction action) {
+  print('Removing…');
   return List.from(items)..remove(action.item);
 }
 

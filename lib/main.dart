@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
 
-import 'home.dart';
-import 'modules/root/reducer.dart';
+import 'package:flutter_redux_pattern/modules/template/containers/example.dart';
+import 'package:flutter_redux_pattern/modules/root/reducer.dart';
 
 void main() {
   final store =
@@ -23,11 +23,12 @@ class FlutterReduxApp extends StatelessWidget {
     return StoreProvider(
       store: store,
       child: new MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Flutter Redux Pattern',
         theme: new ThemeData(
           primarySwatch: Colors.green,
         ),
-        home: new HomeScreen(title: 'Flutter Redux Pattern'),
+        home: new ExampleContainer(),
       ),
     );
   }

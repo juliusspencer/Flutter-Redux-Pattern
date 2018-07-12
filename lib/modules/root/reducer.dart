@@ -1,5 +1,12 @@
-import 'package:redux/redux.dart';
 import '../template/reducer.dart';
+
+class AppState {
+  final ExampleState exampleState;
+
+  AppState({
+    this.exampleState = const ExampleState(),
+  });
+}
 
 /// States, united
 AppState appReducer(AppState state, action) {
@@ -7,13 +14,3 @@ AppState appReducer(AppState state, action) {
     exampleState: state.exampleState,
   );
 }
-
-class AppState {
-  final ExampleState exampleState;
-
-  AppState({
-    this.exampleState,
-  });
-
-}
-
