@@ -1,14 +1,5 @@
-import 'package:meta/meta.dart';
 import '../template/reducer.dart';
-
-@immutable
-class AppState {
-  final ExampleState exampleState;
-
-  AppState({
-    this.exampleState = const ExampleState(),
-  });
-}
+import '../models/app_state.dart';
 
 /// States, united
 AppState appReducer(AppState state, action) {

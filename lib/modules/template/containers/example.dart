@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
 import '../widgets/example.dart';
-import '../../root/reducer.dart';
 import '../actions.dart';
+import '../../models/app_state.dart';
 
 class _ExampleViewModel {
   final List<ExampleItem> items;
