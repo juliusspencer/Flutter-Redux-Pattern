@@ -10,22 +10,25 @@ class ExampleState {
   });
 }
 
-/// Reducing functions
-List<ExampleItem> addItemReducer(List<ExampleItem> items, ExampleAddItemAction action) {
-  print('Adding…');
-  return List.from(items)..add(action.item);
-}
-List<ExampleItem> removeItemReducer(List<ExampleItem> items, ExampleRemoveItemAction action) {
-  print('Removing…');
-  return List.from(items)..remove(action.item);
-}
-
-/// Reducer
-Reducer<List<ExampleItem>> exampleReducer = combineReducers<List<ExampleItem>>([
+/// Reducers
+final Reducer<ExampleState> exampleReducers = combineReducers<ExampleState>([
   // Each `TypedReducer` will glue Actions of a certain type to the given
   // reducer! This means you don't need to write a bunch of `if` checks
   // manually, and can quickly scan the list of `TypedReducer`s to see what
   // reducer handles what action.
-  new TypedReducer<List<ExampleItem>, ExampleAddItemAction>(addItemReducer),
-  new TypedReducer<List<ExampleItem>, ExampleRemoveItemAction>(removeItemReducer),
+  new TypedReducer<ExampleState, ExampleAddItemAction>(addItemReducer),
+  new TypedReducer<ExampleState, ExampleRemoveItemAction>(removeItemReducer),
 ]);
+
+/// Reducing functions
+ExampleState addItemReducer(ExampleState state, ExampleAddItemAction action) {
+  print('Adding…');
+  state.items.add(action.item);
+  return state;
+}
+
+ExampleState removeItemReducer(ExampleState state, ExampleRemoveItemAction action) {
+  print('Removing…');
+  state.items.remove(action.item);
+  return state;
+}

@@ -28,7 +28,6 @@ class ExampleScreen extends StatelessWidget {
           children: <Widget>[
             new IconButton(
               onPressed: () => onAdd(ExampleItem("example", true)),
-//              onPressed: () => print('Add'),
               icon: Icon(Icons.add),
               color: Colors.blue[500],
             ),

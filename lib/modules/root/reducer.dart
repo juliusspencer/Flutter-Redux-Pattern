@@ -1,5 +1,7 @@
+import 'package:meta/meta.dart';
 import '../template/reducer.dart';
 
+@immutable
 class AppState {
   final ExampleState exampleState;
 
@@ -10,7 +12,7 @@ class AppState {
 
 /// States, united
 AppState appReducer(AppState state, action) {
-  return new AppState(
-    exampleState: state.exampleState,
+  return AppState(
+    exampleState: exampleReducers(state.exampleState, action),
   );
 }
