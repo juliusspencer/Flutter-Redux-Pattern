@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
 
-import 'package:flutter_redux_pattern/modules/template/containers/example.dart';
-import 'package:flutter_redux_pattern/modules/root/reducer.dart';
-import 'package:flutter_redux_pattern/modules/models/app_state.dart';
+import 'template/containers/example.dart';
+import 'root/reducer.dart';
+import 'models/app_state.dart';
 
 
 void main() {
