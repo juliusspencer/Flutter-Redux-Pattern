@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../actions.dart';
+import 'package:flutter_redux_pattern/models/exampleItem.dart';
 
 class ExampleScreen extends StatelessWidget {
 
@@ -18,28 +18,31 @@ class ExampleScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text(title),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(title),
       ),
-      body: new Center(
-        child: new Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            new IconButton(
-              onPressed: () => onAdd(ExampleItem("example", true)),
-              icon: Icon(Icons.add),
-              color: Colors.blue[500],
-            ),
-            Text(
-              'Items: ${this.items.length.toString()}'
-            ),
-            new IconButton(
-              onPressed: () => onRemove(ExampleItem("example", true)),
-              icon: Icon(Icons.remove),
-              color: Colors.red[500],
-            ),
-          ],
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              IconButton(
+                onPressed: () => onAdd(ExampleItem("example", true)),
+                icon: Icon(Icons.add),
+                color: Colors.blue[500],
+              ),
+              Text(
+                'Items: ${this.items.length.toString()}'
+              ),
+              IconButton(
+                onPressed: () => onRemove(ExampleItem("example", true)),
+                icon: Icon(Icons.remove),
+                color: Colors.red[500],
+              ),
+            ],
+          ),
         ),
       ),
     );

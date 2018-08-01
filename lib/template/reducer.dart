@@ -1,6 +1,7 @@
-import './actions.dart';
-import 'package:redux/redux.dart';
+import 'package:flutter_redux_pattern/models/exampleItem.dart';
+import 'package:flutter_redux_pattern/template/actions.dart';
 import 'package:meta/meta.dart';
+import 'package:redux/redux.dart';
 
 /// Define the state for this reducer
 @immutable

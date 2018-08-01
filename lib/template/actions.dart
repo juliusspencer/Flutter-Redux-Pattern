@@ -1,3 +1,5 @@
+import 'package:flutter_redux_pattern/models/exampleItem.dart';
+
 class ExampleAction {
   final ExampleItem item;
 
@@ -12,11 +14,4 @@ class ExampleAddItemAction {
 class ExampleRemoveItemAction {
   ExampleItem item;
   ExampleRemoveItemAction(this.item);
-}
-
-class ExampleItem {
-  String name;
-  bool checked;
-
-  ExampleItem(this.name, this.checked);
 }

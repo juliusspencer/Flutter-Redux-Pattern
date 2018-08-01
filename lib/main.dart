@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
+import 'package:flutter_redux_pattern/models/appState.dart';
+import 'package:flutter_redux_pattern/root/reducer.dart';
+import 'package:flutter_redux_pattern/template/containers/example.dart';
 import 'package:redux/redux.dart';
-
-import 'template/containers/example.dart';
-import 'root/reducer.dart';
-import 'models/app_state.dart';
-
 
 void main() {
   final store =

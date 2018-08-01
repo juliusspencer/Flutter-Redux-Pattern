@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
+import 'package:flutter_redux_pattern/models/appState.dart';
+import 'package:flutter_redux_pattern/models/exampleItem.dart';
+import 'package:flutter_redux_pattern/template/actions.dart';
+import 'package:flutter_redux_pattern/template/widgets/example.dart';
 import 'package:redux/redux.dart';
-import '../widgets/example.dart';
-import '../actions.dart';
-import '../../models/app_state.dart';
 
 class _ExampleViewModel {
   final List<ExampleItem> items;

@@ -1,5 +1,5 @@
+import 'package:flutter_redux_pattern/template/reducer.dart';
 import 'package:meta/meta.dart';
-import '../template/reducer.dart';
 
 @immutable
 class AppState {
