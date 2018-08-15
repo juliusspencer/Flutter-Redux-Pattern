@@ -23,4 +23,5 @@ Containers refer to model classes used to receive app state and make it availabl
 
 ## Inspiration
 [Paulina Szklarska's article](https://hackernoon.com/flutter-redux-how-to-make-shopping-list-app-1cd315e79b65)
+
 [Flutter Architecture Samples](https://github.com/brianegan/flutter_architecture_samples)
