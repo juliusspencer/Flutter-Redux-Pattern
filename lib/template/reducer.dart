@@ -7,6 +7,7 @@ import 'package:redux/redux.dart';
 @immutable
 class ExampleState {
   final List<ExampleItem> items;
+
   const ExampleState({this.items = const []});
 
   ExampleState copyWith({List<ExampleItem> items}) {
@@ -21,15 +22,14 @@ class ExampleState {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-          other is ExampleState &&
-              runtimeType == other.runtimeType &&
-              items == other.items;
+      other is ExampleState &&
+          runtimeType == other.runtimeType &&
+          items == other.items;
 
   @override
   String toString() {
     return 'ExampleState{items: $items}';
   }
-
 }
 
 /// Reducers
@@ -52,6 +52,6 @@ ExampleState addItemReducer(ExampleState state, ExampleAddItemAction action) {
 ExampleState removeItemReducer(
     ExampleState state, ExampleRemoveItemAction action) {
   List<ExampleItem> updatedItems = List.from(state.items);
-  if(updatedItems.length > 0) updatedItems.removeLast();
+  if (updatedItems.length > 0) updatedItems.removeLast();
   return ExampleState(items: updatedItems);
 }

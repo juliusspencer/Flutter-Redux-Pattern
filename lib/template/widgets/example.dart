@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux_pattern/models/exampleItem.dart';
 
 class ExampleScreen extends StatelessWidget {
-
   final String title;
   final Function(ExampleItem) onAdd;
   final Function(ExampleItem) onRemove;
@@ -33,9 +32,7 @@ class ExampleScreen extends StatelessWidget {
                 icon: Icon(Icons.add),
                 color: Colors.blue[500],
               ),
-              Text(
-                'Items: ${this.items.length.toString()}'
-              ),
+              Text('Items: ${this.items.length.toString()}'),
               IconButton(
                 onPressed: () => onRemove(ExampleItem("example", true)),
                 icon: Icon(Icons.remove),
