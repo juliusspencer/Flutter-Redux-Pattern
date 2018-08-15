@@ -1,3 +1,6 @@
+![Icon]
+(/img/icon.png)
+
 # `flutter_redux_pattern`
 
 A skeleton Flutter application based on the redux pattern.
@@ -11,4 +14,4 @@ Copy the `template` folder to create new group of widgets. For example: `order` 
 
 When creating a new store in your new `reducer`, make sure you add it to your `appState`. Then start to add actions to your `reducer` to alter the state.
 
-Containers house model classes used to receive app state and make it available to your widgets. They also provide access and callbacks to the app state.
+Containers refer to model classes used to receive app state and make it available to your widgets. They also provide access and callbacks to the app state.
