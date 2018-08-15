@@ -1,15 +1,15 @@
 ![Icon](img/icon.png?raw=true)
 
-# `flutter_redux_pattern`
+# Flutter-Redux-Pattern
 
-A skeleton Flutter application based on the redux pattern.
+A skeleton Flutter application based on the redux pattern. This is used to discuss the redux pattern in Flutter as well as a base and template for new applications. It's expected to evolve…
 
 This application is loosely based on the following pattern:
 [react-redux-typescript-pattern](https://github.com/karlvr/react-redux-typescript-pattern)
 
 ## Getting Started
 
-Use the `template` folder to create new groups of content. For example: `order` or `user` containers and widgets.
+Copy the `template` folder to create new groups of content; eg: `orders` or `users` containers and widgets.
 
 When creating a new store in your new `reducer`, make sure you add it to your `appState`. Then start to add actions to your `reducer` to alter the state.
 

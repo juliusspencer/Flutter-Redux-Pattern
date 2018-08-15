@@ -12,7 +12,7 @@ class ExampleViewModel {
 
   static ExampleViewModel fromStore(Store<AppState> store) {
     return ExampleViewModel(
-            (item) => store.dispatch(ExampleAddItemAction(item)), // dispatching?
+            (item) => store.dispatch(ExampleAddItemAction(item)),
             (item) => store.dispatch(ExampleRemoveItemAction(item)),
         store.state.exampleState.items);
   }
