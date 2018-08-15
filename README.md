@@ -1,5 +1,4 @@
-![Icon]
-(/img/icon.png)
+![Icon](img/icon.png?raw=true)
 
 # `flutter_redux_pattern`
 
@@ -17,8 +16,7 @@ When creating a new store in your new `reducer`, make sure you add it to your `a
 Containers refer to model classes used to receive app state and make it available to your widgets. They also provide access and callbacks to the app state.
 
 ## Demos don't get better than this
-![Demo]
-(/img/example.gif)
+![Demo](img/example.gif?raw=true)
 
 
 ## Inspiration
